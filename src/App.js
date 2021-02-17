@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Tasks from './components/Tasks'
 import {useState} from 'react'
 
-function App() {
+const App = () => {
   const [tasks,setTasks] = useState([
     {
         id: 1,
@@ -28,6 +28,7 @@ function App() {
         reminder: false,
     },
     ])
+    
   return (
     <div className='container'>
       <Header/>
