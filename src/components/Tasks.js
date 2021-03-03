@@ -4,9 +4,9 @@ const Tasks = ({tasks,onDelete,onToggle}) => {
         //looping through tasks and outputting component, passing task in as a prop
         return (
         <>
-            {tasks.map((task) => (
+            {tasks.map((task,index) => (
                 <Task
-                key = {task.id} 
+                key = {index} 
                 task = {task} 
                 onDelete = {onDelete}
                 onToggle = {onToggle}
