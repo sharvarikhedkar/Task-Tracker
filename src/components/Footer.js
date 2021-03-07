@@ -1,14 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Footer = () => {
+    const location = useLocation()
     return (
         <footer>
             <p>
                 copyright &copy; 2021
             </p>
-            
-            <Link to = "/about">About</Link>
+            {location.pathname !== '/about' && (
+                <Link to = "/about">About</Link>
+            )
+            }
             
         </footer>
     )
